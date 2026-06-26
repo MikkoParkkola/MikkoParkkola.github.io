@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mikko Parkkola — tools</title>
+<meta name="description" content="Open-source tools for AI coding agents and everyday use. MCP servers, Claude Code plugins, and CLI utilities.">
+<style>
+  :root{--bg:#0c0d10;--card:#15171c;--line:#23262e;--fg:#e8eaed;--mut:#9aa1ad;--ac:#7fb3ff}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:920px;margin:0 auto;padding:72px 24px 96px}
+  header h1{font-size:30px;margin:0 0 8px;letter-spacing:-.01em}
+  header p{color:var(--mut);margin:0 0 18px;max-width:60ch}
+  header a{color:var(--ac);text-decoration:none}
+  header a:hover{text-decoration:underline}
+  .install{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:22px 0 8px;font:14px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--fg);overflow-x:auto}
+  .install .c{color:var(--mut)}
+  h2{font-size:13px;text-transform:uppercase;letter-spacing:.08em;color:var(--mut);margin:46px 0 14px;font-weight:600}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px}
+  a.card{display:block;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px;text-decoration:none;color:inherit;transition:border-color .15s,transform .15s}
+  a.card:hover{border-color:#3a4356;transform:translateY(-2px)}
+  .card .t{font-weight:650;font-size:16px;margin-bottom:6px}
+  .card .t .lang{float:right;font-size:11px;color:var(--mut);font-weight:500;letter-spacing:.04em;margin-top:3px}
+  .card .d{color:var(--mut);font-size:14px;line-height:1.5}
+  footer{margin-top:64px;color:var(--mut);font-size:13px}
+  footer a{color:var(--mut)}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <h1>Mikko Parkkola</h1>
+  <p>Open-source tools for AI coding agents and for everyday use. Most ship as a single binary or a one-line install. <a href="https://github.com/MikkoParkkola">GitHub profile &rarr;</a></p>
+  <div class="install"><span class="c"># add the plugin marketplace in Claude Code</span><br>claude plugin marketplace add MikkoParkkola/claude-marketplace<br>claude plugin install glyphdown <span class="c"># or: nab, anti-ai-tell, trvl</span></div>
+</header>
+
+<h2>For AI coding agents</h2>
+<div class="grid">
+  <a class="card" href="https://github.com/MikkoParkkola/nab"><div class="t">nab<span class="lang">Rust</span></div><div class="d">Fetch any URL as clean markdown for LLM agents. Real browser-cookie auth, anti-bot reach, prompt-injection defense on by default, plus on-device speech-to-text and OCR. CLI, MCP server, and Claude Code plugin.</div></a>
+  <a class="card" href="https://github.com/MikkoParkkola/trvl"><div class="t">trvl<span class="lang">Go</span></div><div class="d">Search flights, hotels, trains, cars, and ferries from your AI assistant. No API keys, one binary, price alerts built in. Works with Claude, Cursor, Windsurf, and Codex.</div></a>
+  <a class="card" href="https://github.com/MikkoParkkola/glyphdown"><div class="t">glyphdown<span class="lang">Rust</span></div><div class="d">Cut token cost for Claude Code and coding agents, losslessly and on-device. Compresses tool output, dedupes context, compacts the system prompt. Stacks on prompt caching.</div></a>
+  <a class="card" href="https://github.com/MikkoParkkola/anti-ai-tell"><div class="t">anti-ai-tell<span class="lang">Python</span></div><div class="d">Keep your writing from reading as AI-generated. Prompt constraints, an evidence-based linter, and a judgment checklist. Claude Code plugin with adapters for any client.</div></a>
+  <a class="card" href="https://github.com/MikkoParkkola/mcp-gateway"><div class="t">mcp-gateway<span class="lang">Rust</span></div><div class="d">Run every MCP server behind one port. Meta-MCP routing trims about 95% of the context tokens a full tool list would otherwise cost.</div></a>
+  <a class="card" href="https://github.com/MikkoParkkola/axterminator"><div class="t">axterminator<span class="lang">Rust</span></div><div class="d">Let agents drive macOS. 30 tools for background GUI testing, audio and camera capture, and virtual desktops.</div></a>
+  <a class="card" href="https://github.com/MikkoParkkola/rust-mcp-sdk"><div class="t">rust-mcp-sdk<span class="lang">Rust</span></div><div class="d">Build MCP servers and clients in Rust. An async, high-throughput toolkit.</div></a>
+  <a class="card" href="https://github.com/MikkoParkkola/ccelite-statusline"><div class="t">ccelite-statusline<span class="lang">TypeScript</span></div><div class="d">A configurable status line for Claude Code: model, git branch, token usage, and more.</div></a>
+  <a class="card" href="https://github.com/MikkoParkkola/claude-marketplace"><div class="t">claude-marketplace</div><div class="d">The public plugin marketplace for these tools. Install any of them in one command.</div></a>
+</div>
+
+<h2>Everyday, no AI needed</h2>
+<div class="grid">
+  <a class="card" href="https://github.com/MikkoParkkola/nowifi"><div class="t">nowifi<span class="lang">Go</span></div><div class="d">Stuck behind a captive portal? One command, 27 techniques to get back online.</div></a>
+  <a class="card" href="https://github.com/MikkoParkkola/translate-browser-extension"><div class="t">translate<span class="lang">TypeScript</span></div><div class="d">Translate any page in your browser. Ten-plus providers, including local offline models that run in WebAssembly, so the text never leaves your machine.</div></a>
+</div>
+
+<footer>Install via Homebrew: <code>brew tap MikkoParkkola/tap</code>. Source for every project lives on <a href="https://github.com/MikkoParkkola">GitHub</a>.</footer>
+</div>
+</body>
+</html>
